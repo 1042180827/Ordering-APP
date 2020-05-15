@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food Management</title>
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+</head>
+<body class="sidebar-fixed header-fixed">
+<div class="page-wrapper">
+    <nav class="navbar page-header">
+        <a href="#" class="btn btn-link sidebar-mobile-toggle d-md-none mr-auto">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
+            <i class="fa fa-bars"></i>
+        </a>
+
+        <ul class="navbar-nav ml-auto">
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="imgs/avatar-1.png" class="avatar avatar-sm" alt="logo">
+                    <span class="small ml-1 d-md-down-none" th:text="${session.user.storeName}"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right">
+
+                    <a href="logout" class="dropdown-item">
+                        <i class="fa fa-lock"></i> exit
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-title">menu</li>
+
+                    <li class="nav-item">
+                        <a href="index" class="nav-link active">
+                            <i class="icon icon-notebook"></i> Food Management
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header bg-light">
+                                            Food list
+                                        </div>
+                                        <div class="ml-4 mt-4">
+                                        <a href="#" th:href="@{/admin/food/input}" class="ui mini right floated teal basic button">add</a>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="width100">name</th>
+                                                        <th>price</th>
+                                                        <th>image</th>
+                                                        <th>type</th>
+                                                        <th>status</th>
+                                                        <th>taste</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody id="article_list">
+                                                    <tr  th:each="food,iterStat : ${session.foodlist}">
+                                                        <td  th:text="${food.name}"></td>
+                                                        <td th:text="${food.danjia}"></td>
+                                                        <td  th:text="${food.image}"></td>
+                                                        <td  th:text="${food.type}"></td>
+                                                        <td  th:text="${food.status}"></td>
+                                                        <td  th:text="${food.taste}"></td>
+                                                        <td>
+                                                            </button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            <!--<button th:attr="data-articleid=${food.id}" type="button" class="btn btn-primary btn-sm edit-article">-->
+                                                                <!--<i class="fa fa-edit"></i> &nbsp;edit-->
+                                                            <a href="#" th:href="@{/admin/food/{id}/input(id=${food.id})}" class="ui mini teal basic button">edit</a>
+                                                            <button th:attr="data-articleid=${food.id}" type="button" class="btn btn-danger btn-sm delete-article">
+                                                                <i class="fa fa-trash"></i> &nbsp; delete
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="center">
+                                                <ul id="jqpage" class="pagination">
+
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="jquery.js"></script>
+<script src="vendor/popper.js/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jq-paginator.js"></script>
+<script src="carbon.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".view.CaiActivity"
+	android:orientation="vertical"
+	>
+	<RelativeLayout
+		android:fitsSystemWindows="true"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/blue">
+		<TextView
+			android:id="@+id/tv1"
+			android:layout_centerHorizontal="true"
+			android:textSize="20sp"
+			android:text="摇一摇"
+			android:textColor="@color/white"
+			android:padding="10dp"
+			android:gravity="center"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp" />
+
+
+	</RelativeLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<TextView
+			android:text="不知道吃什么，摇一摇获取菜单吧"
+			android:textSize="15sp"
+			android:layout_marginTop="10dp"
+			android:layout_gravity="center"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/ll_yao"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:orientation="vertical"
+		android:background="@mipmap/yao"></LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/ll_dan"
+		android:visibility="gone"
+		android:layout_marginTop="50dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<TextView
+			android:id="@+id/tv_con"
+			android:text="快来试试xxx"
+			android:layout_gravity="center"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+		<Button
+			android:id="@+id/tv_commit"
+			android:text="下  单"
+			android:layout_marginTop="30dp"
+			android:textSize="15sp"
+			android:layout_gravity="center_horizontal"
+			android:textColor="@color/blue"
+			android:layout_marginLeft="10dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		<TextView
+			android:textSize="13sp"
+			android:text="（不想吃？摇一摇再换菜单）"
+			android:layout_gravity="center"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+
+</LinearLayout>

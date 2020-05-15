@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	>
+
+    <TextView
+	    android:fitsSystemWindows="true"
+        android:id="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="order details"
+	    android:textColor="@color/white"
+	    android:padding="10dp"
+	   android:gravity="center"
+	    android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+
+
+
+    <ScrollView
+        android:layout_below="@id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+	    android:layout_marginBottom="60dp">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+	        <android.support.v7.widget.RecyclerView
+		        android:id="@+id/item_recycler"
+		        android:layout_width="match_parent"
+		        android:background="@drawable/shape_white_3"
+		        android:layout_height="match_parent" >
+	        </android.support.v7.widget.RecyclerView>
+            <EditText
+                android:layout_below="@id/item_recycler"
+                android:layout_marginTop="10dp"
+                android:id="@+id/etdetail"
+                android:hint="remark："
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_below="@id/etdetail"
+                android:background="#fff"
+                android:id="@+id/re"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <TextView
+                    android:id="@+id/tvzongjia"
+                    android:text="Total price："
+                    android:textSize="20sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="5dp"
+		            android:textColor="@color/blue"
+		            android:gravity="center"
+		            android:id="@+id/btnsure"
+		            android:layout_marginRight="15dp"
+		            android:text="Confirm order"
+		            android:layout_alignParentRight="true"
+		            android:textSize="20sp"
+		            android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_below="@id/re"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

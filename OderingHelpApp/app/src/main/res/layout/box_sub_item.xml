@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:padding="5dp"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:orientation="horizontal">
+
+		<RelativeLayout
+			android:layout_width="60dp"
+			android:layout_height="60dp"
+			android:layout_centerVertical="true">
+			<ImageView
+				android:id="@+id/re_wz_img"
+				android:layout_width="60dp"
+				android:layout_height="60dp"
+				android:src="@mipmap/original" />
+		</RelativeLayout>
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="25dp"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="name："
+					android:textSize="12dp" />
+
+				<TextView
+					android:id="@+id/tv_name"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="beef"
+					android:textSize="12sp" />
+			</LinearLayout>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp">
+
+				<TextView
+					android:id="@+id/jg"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="price："
+					android:textSize="12sp" />
+
+				<TextView
+					android:id="@+id/tv_danjia"
+					android:layout_toRightOf="@id/jg"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text=""
+					android:textSize="12sp" />
+				<TextView
+					android:id="@+id/add"
+					android:drawableTop="@drawable/ic_gwc"
+					android:layout_alignParentEnd="true"
+					android:layout_marginEnd="10dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+				<TextView
+					android:id="@+id/status"
+					android:text="selected"
+					android:textColor="@color/red"
+					android:visibility="gone"
+					android:layout_alignParentEnd="true"
+					android:layout_marginEnd="10dp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+
+				<ImageView
+					android:id="@+id/hasno"
+					android:visibility="gone"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical ="true"
+					android:layout_marginEnd="10dp"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:src="@drawable/ic_hasno" />
+			</RelativeLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+</LinearLayout>

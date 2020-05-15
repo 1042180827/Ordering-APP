@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="70dp"
+		android:background="@color/blue"
+		>
+		<TextView
+			android:id="@+id/title_txt"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignTop="@+id/title_left"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"
+			android:paddingBottom="12dp"
+			android:paddingTop="20dp"
+			android:text="Personal center"
+			android:textColor="@color/white"
+			android:textSize="16dp" />
+
+		<ImageView
+			android:id="@+id/title_left"
+			android:layout_width="wrap_content"
+			android:layout_height="35dp"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:layout_centerVertical="true"
+			android:paddingTop="20dp"
+			android:paddingLeft="10dp"
+			android:src="@mipmap/back" />
+
+		<TextView
+			android:id="@+id/title_right"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@id/title_txt"
+			android:layout_marginTop="2dp"
+			android:layout_centerHorizontal="true"
+			android:textColor="@color/white"
+			android:textSize="10dp"
+			android:text="My balance：" />
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5.0dip"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:orientation="horizontal" >
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="name"
+			android:textColor="@color/black"
+			android:textSize="20sp" />
+
+		<EditText
+			android:id="@+id/info_name"
+			style="@style/styleTextView"
+			android:layout_width="0dip"
+			android:layout_weight="1" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginTop="5dip" >
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="password"
+			android:textColor="@color/black"
+			android:textSize="20sp" />
+
+		<EditText
+			android:id="@+id/info_pwd"
+			style="@style/styleTextView" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5.0dip"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:orientation="horizontal" >
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="phone number"
+			android:textColor="@color/black"
+			android:textSize="20sp" />
+
+		<EditText
+			android:id="@+id/info_phone"
+			style="@style/styleTextView"
+			android:focusable="false"
+			android:enabled="false"
+			android:layout_width="0dip"
+			android:layout_weight="1" />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/ll_add"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5.0dip"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:orientation="horizontal" >
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Store name"
+			android:textColor="@color/black"
+			android:textSize="20sp" />
+
+		<EditText
+			android:id="@+id/info_store_name"
+			style="@style/styleTextView"
+			android:layout_width="0dip"
+			android:layout_weight="1" />
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/ll_name"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5.0dip"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:orientation="horizontal" >
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Store address"
+			android:textColor="@color/black"
+			android:textSize="20sp" />
+
+		<EditText
+			android:id="@+id/info_address"
+			style="@style/styleTextView"
+			android:layout_width="0dip"
+			android:layout_weight="1" />
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/btn_sure"
+		android:layout_width="match_parent"
+		android:layout_marginLeft="30dp"
+		android:layout_marginRight="30dp"
+		android:layout_height="33dp"
+		android:background="@drawable/shape_blue_8"
+		android:text="确定修改"
+		android:textSize="16sp"
+		android:layout_centerInParent="true"
+		android:textColor="@color/white"
+		android:gravity="center"
+		android:layout_gravity="center_horizontal"
+		android:paddingStart="10dp"
+		android:paddingEnd="10dp"
+		android:foreground="?selectableItemBackground"
+		android:layout_marginTop="20dp"
+		android:layout_marginBottom="15dp"
+		android:orientation="horizontal">
+	</Button>
+</LinearLayout>

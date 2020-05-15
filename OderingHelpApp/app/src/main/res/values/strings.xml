@@ -1,0 +1,22 @@
+<resources>
+	<string name="app_name">点餐管理系统</string>
+
+
+	<string name="user_store">stores</string>
+	<string name="user_my">My order</string>
+	<string name="user_cai">Personal center</string>
+	<string name="user_recommend">recommend food</string>
+
+	<string name="sj_manage">Food</string>
+	<string name="sj_see">Take orders</string>
+	<string name="sj_pj">In-store evaluation</string>
+	<string name="sj_xs">Sales management</string>
+	<string name="sj_info">Store Information</string>
+
+
+	<string name="index_sj">Business information</string>
+	<string name="index_user">User Info</string>
+
+
+	<string name="error_gif">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM</string>
+</resources>

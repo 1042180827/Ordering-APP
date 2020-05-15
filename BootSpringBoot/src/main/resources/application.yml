@@ -1,0 +1,17 @@
+server:
+    port: 8080
+    servlet:
+        context:
+        session:
+            timeout: 30M
+        context-path: /BootSpringBoot
+    tomcat:
+        max-threads: 0
+        uri-encoding: UTF-8
+spring:
+    datasource:
+        url: jdbc:mysql://127.0.0.1:3306/order_food?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+        username: root
+        password: jiayou2016
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource

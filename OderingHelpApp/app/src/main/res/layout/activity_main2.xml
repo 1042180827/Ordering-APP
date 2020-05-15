@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+
+	tools:context="com.saxiao.orderinghelpapp.view.Main2Activity"
+	>
+	<TextView
+		android:fitsSystemWindows="true"
+		android:id="@+id/tv1"
+		android:layout_centerHorizontal="true"
+		android:textSize="20sp"
+		android:text="Main Menu"
+		android:textColor="@color/white"
+		android:padding="10dp"
+		android:gravity="center"
+		android:background="@color/blue"
+		android:layout_width="match_parent"
+		android:layout_height="50dp" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<com.bigkoo.convenientbanner.ConvenientBanner
+			android:id="@+id/cb_banner"
+			app:canLoop="true"
+			android:layout_width="match_parent"
+			android:layout_height="160dp"/>
+	</LinearLayout>
+
+	<android.support.v4.widget.SwipeRefreshLayout
+		android:id="@+id/swipe_ref1"
+		android:layout_width="match_parent"
+		android:layout_marginTop="10dp"
+		android:background="@color/background_gray"
+		android:layout_height="match_parent"
+		>
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/recycle"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginStart="5dp"
+		android:layout_marginEnd="5dp"
+		android:layout_marginTop="10dp"
+		android:layout_marginBottom="8dp"
+		android:layout_weight="1" />
+	</android.support.v4.widget.SwipeRefreshLayout>
+
+<!--	<android.support.v4.widget.SwipeRefreshLayout-->
+<!--		android:id="@+id/swipe_ref"-->
+<!--		android:layout_width="match_parent"-->
+<!--		android:layout_height="match_parent"-->
+<!--		android:layout_marginTop="10dp"-->
+<!--		android:background="@color/background_gray">-->
+
+<!--		<android.support.v7.widget.RecyclerView-->
+<!--			android:id="@+id/recomm"-->
+<!--			android:layout_width="match_parent"-->
+<!--			android:layout_height="0dp"-->
+<!--			android:layout_marginStart="5dp"-->
+<!--			android:layout_marginTop="10dp"-->
+<!--			android:layout_marginEnd="5dp"-->
+<!--			android:layout_marginBottom="8dp"-->
+<!--			android:layout_weight="1" />-->
+<!--	</android.support.v4.widget.SwipeRefreshLayout>-->
+</LinearLayout>

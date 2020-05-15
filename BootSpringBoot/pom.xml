@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- 声明项目描述符遵循哪一个POM模型版本。模型本身的版本很少改变，虽然如此，但它仍然是必不可少的，
+         这是为了当Maven引入了新的特性或者其他模型变更的时候，确保稳定性。 -->
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- 项目的全球唯一标识符，通常使用全限定的包名区分该项目和其他项目。并且构建时生成的路径也是由此生成，
+         如com.mycompany.app生成的相对路径为：/com/mycompany/app -->
+	<groupId>com.BootSpringBoot</groupId>
+	<!-- 构件的标识符，它和group ID一起唯一标识一个构件。换句话说，你不能有两个不同的项目拥有同样的artifact ID
+         和groupID；在某个特定的group ID下，artifact ID也必须是唯一的。构件是项目产生的或使用的一个东西，Maven
+         为项目产生的构件包括：JARs，源码，二进制发布和WARs等。 -->
+	<artifactId>BootSpringBoot</artifactId>
+	<!-- 项目当前版本，格式为:主版本.次版本.增量版本-限定版本号 -->
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- 项目产生的构件类型，例如jar、war、ear、pom。插件可以创建他们自己的构件类型，所以前面列的不是全部构件类型 -->
+	<packaging>war</packaging>
+
+	<name>BootSpringBoot</name>
+	<description>Demo project for spring boot</description>
+	<!-- 父项目的坐标。如果项目中没有规定某个元素的值，那么父项目中的对应值即为项目的默认值。 坐标包括group ID，artifact ID和 version。-->
+	<parent>
+		<!-- Spring boot的项目必须要将parent设置为spring boot的parent，该parent包含了大量默认的配置，大大简化了我们的开发 -->
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.8.RELEASE</version>
+	</parent>
+
+	<!-- 以值替代名称，Properties可以在整个POM中使用，也可以作为触发条件;格式是<name>value</name>。-->
+	<properties>
+		<java.version>1.8</java.version>
+		<mybatis.spring.version>1.2.4</mybatis.spring.version>
+		<mapper.starter.version>2.0.4</mapper.starter.version>
+		<pagehelper.starter.version>1.2.9</pagehelper.starter.version>
+	</properties>
+
+	<!-- 该元素描述了项目相关的所有依赖。这些依赖组成了项目构建过程中的一个个环节。它们自动从项目定义的仓库中下载。-->
+	<dependencies>
+		<!-- 导入spring boot的web支持 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- 去除内嵌tomcat 生产环境下开启-->
+			<!--<exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>-->
+		</dependency>
+		<!-- 导入spring boot对数据库jdbc的支持 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<!-- 使用spring-aop和AspectJ 支持面向切面编程 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<!-- 对常用的测试框架Junit,Hamcrest 和 Mockito的支持 包含spring-test的模块 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<!-- 导入mysql连接设置 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.47</version>
+		</dependency>
+		<!-- 导入spring对Apache Shiro的 -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<!-- springBoot与mybatis的整合 -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper-spring-boot-starter</artifactId>
+			<version>${mapper.starter.version}</version>
+		</dependency>
+		<!-- springBoot的分页工具 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>${pagehelper.starter.version}</version>
+			<!-- 当计算传递依赖时， 从依赖构件列表里，列出被排除的依赖构件集。即告诉maven你只依赖指定的项目，不依赖项目的依赖。此元素主要用于解决版本冲突问题 -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.mybatis.spring.boot</groupId>
+					<artifactId>mybatis-spring-boot-starter</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- 添加druid数据库连接池对springBoot的支持 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.10</version>
+		</dependency>
+		<!-- 添加hutool工具类 -->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>4.1.19</version>
+		</dependency>
+		<!-- 添加fastjson对json串的处理 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.60</version>
+		</dependency>
+		<!-- 添加lombok插件简化实体类冗余代码 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.4</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+			<version>1.5.21</version>
+		</dependency>
+		<!-- 引入poi插件 -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+		<!-- ip地址查询库 -->
+		<dependency>
+			<groupId>org.lionsoul</groupId>
+			<artifactId>ip2region</artifactId>
+			<version>1.7.2</version>
+		</dependency>
+		<!--添加servlet的依赖 生产环境下开启-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<!-- 构建项目需要的信息 -->
+	<build>
+		<!-- 打包项目名称 -->
+		<finalName>${project.artifactId}</finalName>
+		<!-- 使用的插件列表 -->
+		<plugins>
+			<!-- plugin元素包含描述插件所需要的信息 -->
+			<!-- 使用generator插件自动生成相关文件 -->
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.6</version>
+				<!-- 扩展配置项 -->
+				<configuration>
+					<!-- MyBaits-generator的配置文件generatorConfig.xml的位置 -->
+					<configurationFile>${pom.basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
+					<!-- 是否覆盖同名文件（只是针对XML文件,java文件生成类似*.java.1、*.java.2形式的文件）-->
+					<overwrite>true</overwrite>
+					<!-- 是否将生成过程输出至控制台 -->
+					<verbose>true</verbose>
+				</configuration>
+				<!-- 项目引入插件所需要的额外依赖 -->
+				<dependencies>
+					<!-- mysql的连接依赖 -->
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.47</version>
+					</dependency>
+					<dependency>
+						<groupId>tk.mybatis</groupId>
+						<artifactId>mapper-generator</artifactId>
+						<version>1.0.0</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+
+	</build>
+
+</project>

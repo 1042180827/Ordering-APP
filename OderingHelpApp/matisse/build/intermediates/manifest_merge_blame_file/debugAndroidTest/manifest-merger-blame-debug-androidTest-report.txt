@@ -1,0 +1,59 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.zhihu.matisse.test" >
+4
+5    <uses-sdk
+5-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:5:5-74
+6        android:minSdkVersion="14"
+6-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:5:15-41
+7        android:targetSdkVersion="27" />
+7-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:5:42-71
+8
+9    <instrumentation
+9-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:11:5-15:72
+10        android:name="android.test.InstrumentationTestRunner"
+10-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:11:22-75
+11        android:functionalTest="false"
+11-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:14:22-52
+12        android:handleProfiling="false"
+12-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:13:22-53
+13        android:label="Tests for com.zhihu.matisse.test"
+13-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:15:22-70
+14        android:targetPackage="com.zhihu.matisse.test" />
+14-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:12:22-68
+15
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:5-81
+16-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:24:22-78
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:5-80
+17-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:25:22-77
+18
+19    <application android:debuggable="true" >
+19-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:7:5-9:19
+19-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:7:18-43
+20        <uses-library android:name="android.test.runner" />
+20-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:8:9-60
+20-->D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger3258631660607921035.xml:8:23-57
+21
+22        <activity
+22-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:28:9-30:39
+23            android:name="com.zhihu.matisse.ui.MatisseActivity"
+23-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:29:13-64
+24            android:exported="true" />
+24-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:30:13-36
+25        <activity
+25-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:31:9-33:39
+26            android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity"
+26-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:32:13-78
+27            android:exported="true" />
+27-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:33:13-36
+28        <activity
+28-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:34:9-36:39
+29            android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity"
+29-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:35:13-81
+30            android:exported="true" />
+30-->[__tested_artifact__::matisse] D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\build\intermediates\library_manifest\debug\AndroidManifest.xml:36:13-36
+31    </application>
+32
+33</manifest>

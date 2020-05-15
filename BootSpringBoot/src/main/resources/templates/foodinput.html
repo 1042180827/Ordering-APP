@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Management</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
+  <link rel="stylesheet" href="../../static/CSS/me.css">
+</head>
+<body>
+
+  <!--导航-->
+
+
+  <div  class="m-container m-padded-tb-big">
+    <div class="ui container">
+      <form id="blog-form" action="#" th:object="${food}"  method="post" enctype ="multipart/form-data" th:action="@{/index}" class="ui form">
+        <input type="hidden" name="id" th:value="*{id}">
+        <input type="hidden" name="storeName" th:value="${session.user.storeName}">
+        <input type="hidden" name="storeId" th:value="${session.user.id}">
+        <div class="required field">
+          <div class="ui left labeled input">
+            <div class="ui selection compact teal basic dropdown label">
+              <input type="hidden" value="normal" name="status" th:value="*{status}" >
+              <i class="dropdown icon"></i>
+              <div class="text">normal</div>
+              <div class="menu">
+                <div class="item" data-value="normal">normal</div>
+                <div class="item" data-value="sold out">sold out</div>
+              </div>
+            </div>
+            <input type="text" name="name" placeholder="food name" th:value="*{name}">
+          </div>
+        </div>
+        <div class="required field">
+          <div class="ui left labeled input">
+            <input type="text" name="danjia" placeholder="price" th:value="*{danjia}">
+          </div>
+        </div>
+        <div class="required field">
+          <div class="ui left labeled input">
+            <div class="ui selection compact teal basic dropdown label">
+              <input type="hidden" value="soup" name="type" th:value="*{type}" >
+              <i class="dropdown icon"></i>
+              <div class="text">soup</div>
+              <div class="menu">
+                <div class="item" data-value="soup">soup</div>
+                <div class="item" data-value="main dishes">main dishes</div>
+                <div class="item" data-value="cold dishes">cold dishes</div>
+                <div class="item" data-value="dessert">dessert</div>
+              </div>
+            </div>
+            <input type="text" name="taste" placeholder="taste" th:value="*{taste}">
+          </div>
+        </div>
+        <!--<input type="file" id="img_upload" />-->
+          <input type="file" id="img_upload"/>
+          <!--<p id="img_area"></p>-->
+          <!--<div class="required field">-->
+        <!--<div id="base64_code"  style="z-index: 1 !important;">-->
+          <textarea  id="base64_code" name= "image"rows="3" cols="360" th:text="*{image}"></textarea>
+        <!--</div>-->
+          <!--</div>-->
+          <p id="img_area"></p>
+
+
+
+        <!--<div class="required field">-->
+          <!--<textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="200"></textarea>-->
+        <!--</div>-->
+
+
+        <div class="ui right aligned container">
+          <button type="button" class="ui button" onclick="window.history.go(-1)" >back</button>
+          <button type="button" id="save-btn" class="ui secondary button">save</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+  <script src="jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <!--/*/</th:block>/*/-->
+
+
+  <script>
+
+    //初始化Markdown编辑器
+    var contentEditor;
+    $(function() {
+      contentEditor = editormd("md-content", {
+        width   : "100%",
+        height  : 200,
+        syncScrolling : "single",
+//        path    : "../static/lib/editormd/lib/"
+        path    : "/lib/editormd/lib/"
+      });
+    });
+    $('.menu.toggle').click(function () {
+      $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown({
+      on : 'hover'
+    });
+
+    $('#save-btn').click(function () {
+      $('#blog-form').submit();
+    });
+    window.onload = function(){
+        // 抓取上传图片，转换代码结果，显示图片的dom
+        var img_upload=document.getElementById("img_upload");
+        var base64_code=document.getElementById("base64_code");
+        var img_area=document.getElementById("img_area");
+        // 添加功能出发监听事件
+        img_upload.addEventListener('change',readFile,false);}
+    function readFile(){
+        var file=this.files[0];
+        if(!/image\/\w+/.test(file.type)){
+            alert("请确保文件为图像类型");
+            return false;
+        }
+        // var file1=document.getElementById("base64_code").files[0];
+        var reader=new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload=function(){
+            base64_code.innerHTML = this.result;
+            img_area.innerHTML = '<div>image：</div><img src="'+this.result+'" alt=""/>';
+        }
+    }
+    $('.ui.form').form({
+      fields : {
+        name : {
+          identifier: 'name',
+          rules: [{
+            type : 'empty',
+            prompt: 'enter food name please'
+          }]
+        },
+        status : {
+          identifier: 'status',
+          rules: [{
+            type : 'empty',
+            prompt: 'choose status please'
+          }]
+        },
+        danjia : {
+          identifier: 'danjia',
+          rules: [{
+            type : 'empty',
+            prompt: 'enter the price please'
+          }]
+        },
+        image : {
+          identifier: 'image',
+          rules: [{
+            type : 'empty',
+            prompt: 'choose the image'
+          }]
+        },
+        taste : {
+          identifier: 'taste',
+          rules: [{
+            type : 'empty',
+            prompt: 'enter food taste please'
+          }]
+        },
+          type : {
+              identifier: 'type',
+              rules: [{
+                  type : 'empty',
+                  prompt: 'choose food type please'
+              }]
+          }
+      }
+    });
+
+
+
+    // $('#save_article').on('click', function (e) {
+    //     var name = $("#name").val();
+    //     var type = $("#type").val();
+    //     var status = $("#status").val();
+    //     var taste = $("#taste").val();
+    //     var image = $("#image").val();
+    //     var danjia = $("#danjia").val();
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "index",
+    //         dataType: "json",
+    //         data: {
+    //             'id': $("#id").val(),
+    //             'name': name,
+    //             'type': type,
+    //             'image': image,
+    //             'taste': taste,
+    //             'danjia': danjia,
+    //             'storeId': session.user.id,
+    //             'storeName': session.user.store_name,
+    //         }
+    //     });
+    // });
+
+
+
+    // $('#chooseImage').on('change',function(){
+    //     var filePath = $(this).val(),         //获取到input的value，里面是文件的路径
+    //         fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase();
+    //     // 检查是否是图片
+    //     if( !fileFormat.match(/.png|.jpg|.jpeg/) ) {
+    //         error_prompt_alert('上传错误,文件格式必须为：png/jpg/jpeg');
+    //         return;
+    //     }
+    //     $('#cropedBigImg').attr('src',filePath);
+    //     $('#loding').show();
+    //});
+  </script>
+</body>
+</html>

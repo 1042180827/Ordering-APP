@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stone.mapper.ParkingRecordMapper">
+  <resultMap id="BaseResultMap" type="com.stone.bean.ParkRecord">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="park_name" jdbcType="VARCHAR" property="parkName" />
+    <result column="park_date" jdbcType="VARCHAR" property="parkDate" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="park_pay" jdbcType="DOUBLE" property="parkPay" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="car_number" jdbcType="VARCHAR" property="carNumber" />
+  </resultMap>
+</mapper>

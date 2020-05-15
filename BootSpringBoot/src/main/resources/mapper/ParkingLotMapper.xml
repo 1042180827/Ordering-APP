@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stone.mapper.ParkingLotMapper">
+  <resultMap id="BaseResultMap" type="com.stone.model.dic.ParkingLot">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="time" jdbcType="VARCHAR" property="time" />
+    <result column="price" jdbcType="VARCHAR" property="chargeSituation" />
+    <result column="remaining_count" jdbcType="INTEGER" property="remainingCount" />
+  </resultMap>
+</mapper>

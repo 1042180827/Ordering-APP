@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AmountView">
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="btnWidth" format="dimension" />
+        <!-- 中间TextView的宽度 -->
+        <attr name="tvWidth" format="dimension" />
+        <!--<attr name="tvColor" format="color"/>-->
+        <attr name="tvTextSize" format="dimension"/>
+        <attr name="btnTextSize" format="dimension"/>
+
+	    <!-- 头标题颜色 -->
+	    <attr name="headBackground" format="reference" />
+	    <!-- 主界面背景图 -->
+	    <attr name="mainBackground" format="reference" />
+	    <!-- 底标题颜色 -->
+	    <attr name="bottomBackground" format="reference" />
+	    <!-- 字体颜色 -->
+	    <attr name="indextextColor" format="reference" />
+	    <!-- 按钮背景图 -->
+	    <attr name="bottonColor" format="reference" />
+
+    </declare-styleable>
+</resources>

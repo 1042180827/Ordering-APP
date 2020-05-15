@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="com.saxiao.orderinghelpapp.view.SplashActivity"
+	>
+	<ImageView
+		android:id="@+id/imageView2"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:alpha="0.5"
+		android:scaleType="fitXY"
+		android:src="@mipmap/timg2" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center_vertical"
+		android:orientation="vertical">
+
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:textSize="25dp"
+			android:textStyle="bold"
+			android:text="欢迎使用" />
+		<TextView
+			android:id="@+id/textView12"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="28dp"
+			android:textStyle="bold"
+			android:gravity="center"
+			android:layout_marginTop="20dp"
+			android:text="点餐管理系统" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:gravity="center_horizontal"
+			android:textColor="@color/list_b"
+			android:text="祝您用餐愉快" />
+	</LinearLayout>
+
+</RelativeLayout>

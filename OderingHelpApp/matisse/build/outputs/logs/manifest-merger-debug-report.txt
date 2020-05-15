@@ -1,0 +1,53 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:17:1-32:12
+INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:17:1-32:12
+INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:17:1-32:12
+	package
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:19:5-32
+		INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+		INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:18:5-63
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:21:5-80
+	android:name
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:21:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:22:22-77
+application
+ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:24:5-31:19
+activity#com.zhihu.matisse.ui.MatisseActivity
+ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:25:9-26:39
+	android:exported
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:26:13-36
+	android:name
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:25:19-70
+activity#com.zhihu.matisse.internal.ui.AlbumPreviewActivity
+ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:27:9-28:39
+	android:exported
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:27:19-84
+activity#com.zhihu.matisse.internal.ui.SelectedPreviewActivity
+ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:29:9-30:39
+	android:exported
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml:29:19-87
+uses-sdk
+INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+		INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+		ADDED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
+		INJECTED from D:\ORDERAPP\Order_APP\anzhuodiancan\OderingHelpApp\matisse\src\main\AndroidManifest.xml
